@@ -1,0 +1,19 @@
+<!--my-components/star/index.wxml-->
+<view class="star">
+<text class="title">{{title}}</text>
+  <block wx:if='{{fullStar > 0}}'>
+    <block wx:for='{{fullStar}}' wx:key='un'>
+      <image class="item-img" mode="aspectFill" src="../../static/images/icon_star@2x.png"></image>
+    </block>
+  </block>
+  <block wx:if='{{halfStar > 0}}'>
+    <block wx:for='{{halfStar}}' wx:key='un'>
+      <image class="item-img" mode="aspectFill" src="../../static/images/icon_star2@2x.png"></image>
+    </block>
+  </block>
+  <block wx:if='{{emptyStar > 0}}'>
+    <block wx:for='{{emptyStar}}' wx:key='un'>
+      <image class="item-img" mode="aspectFill" src="../../static/images/icon_star3@2x.png"></image>
+    </block>
+  </block>
+</view>

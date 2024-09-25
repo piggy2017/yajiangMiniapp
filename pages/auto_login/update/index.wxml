@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="form">
+    <input placeholder="{{language.dlm}}" value="{{loginName}}" bindblur="bindBlur" data-field="loginName" placeholder-class="placeholder"></input>
+    <input placeholder="{{language.nc}}" value="{{nickname}}" bindblur="bindBlur" data-field="nickname" placeholder-class="placeholder"></input>
+    <input placeholder="{{language.jmm}}" bindblur="bindBlur" data-field="oldPassword"   password="true" placeholder-class="placeholder"></input>
+    <input placeholder="{{language.xmm}}" bindblur="bindBlur" data-field="newPassword"   password="true" placeholder-class="placeholder"></input>
+    <input placeholder="{{language.qqrxmm}}" bindblur="bindBlur" data-field="confirmNewPassword"   password="true" placeholder-class="placeholder"></input>
+  </view>
+  <view class="btn-box">
+    <view class="login-btn" bindtap="handleLogin">{{language.qrxg}}</view>
+  </view>
+  <view hidden="{{!verify}}" class="dialog">
+    {{message}}
+  </view>
+</view>

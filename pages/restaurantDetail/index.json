@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "star": "../../my-components/star/index",
+    "swiperImg": "../../my-components/swiper_img/index"
+  },
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false
+}

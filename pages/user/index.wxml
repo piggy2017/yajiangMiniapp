@@ -1,0 +1,80 @@
+<view class="container">
+  <view class="header">
+    <view class="portrait-box">
+      <image wx:if="{{!isLogin}}" class="portrait" src="../../static/images/icon_login_default_pic@2x.png" mode="aspectFill"></image>
+      <image wx:else class="portrait" src="../../static/images/icon_login_pic@2x.png" mode="aspectFill"></image>
+    </view>
+    <view class="loginName-box" bindtap="gotoPage" data-url="/pages/auto_login/info/index">
+      <text wx:if="{{!isLogin}}" class="login-btn">{{language.djdl}}</text>
+      <view wx:else class="user-info">
+        <view class="nickname">{{nickname}}</view>
+        <view class="loginName-word">{{loginName}}</view>
+      </view>
+    </view>
+    <view class="icon-box" bindtap="gotoPage" data-url="/pages/auto_login/info/index">
+      <image src="../../static/images/icon_my_forward_white@2x.png" mode="aspectFill"></image>
+    </view>
+  </view>
+
+  <view class="list">
+    <view class="item" bindtap="gotoPage" data-url="/pages/routeCollect/index">
+      <view class="icon-first">
+        <image src="../../static/images/icon_my_line@2x.png" mode="aspectFill"></image>
+      </view>
+
+      <view class="title">{{language.scdlx}}</view>
+      <view class="icon-last">
+        <image src="../../static/images/icon_my_forward@2x.png" mode="aspectFill"></image>
+      </view>
+
+    </view>
+    <view class="item" bindtap="gotoPage" data-url="/pages/scenicCollect/index">
+      <view class="icon-first">
+        <image src="../../static/images/icon_my_scenic@2x.png" mode="aspectFill"></image>
+      </view>
+
+      <view class="title">{{language.scdjd}}</view>
+      <view class="icon-last">
+        <image src="../../static/images/icon_my_forward@2x.png" mode="aspectFill"></image>
+      </view>
+
+    </view>
+    <view class="item" bindtap='gotoActivity' data-url='{{commonComplaint.contentUrl}}' data-title="{{commonComplaint.title}}">
+      <view class="icon-first">
+        <image src="../../static/images/icon_my_edit@2x.png" mode="aspectFill"></image>
+      </view>
+
+      <view class="title">{{language.tsjy}}</view>
+      <view class="icon-last">
+        <image src="../../static/images/icon_my_forward@2x.png" mode="aspectFill"></image>
+      </view>
+
+    </view>
+    <view class="item">
+      <view class="icon-first">
+        <image src="../../static/images/icon_my_translate@2x.png" mode="aspectFill"></image>
+      </view>
+
+      <view class="title">{{language.yy}}</view>
+      <view class="language-box">
+        <picker class="language" bindchange="bindPickerChange" value="{{langIndex}}" range="{{languageList}}">
+          <view style="width:100rpx;text-align:right;">
+            {{languageList[langIndex]}}
+          </view>
+        </picker>
+        <image src="../../static/images/icon_my_forward@2x.png" mode="aspectFill"></image>
+      </view>
+
+    </view>
+    <view class="item" bindtap='gotoActivity' data-url='{{commonAbout.contentUrl}}' data-title="{{commonAbout.title}}">
+      <view class="icon-first">
+        <image src="../../static/images/icon_about@2x.png" mode="aspectFill"></image>
+      </view>
+
+      <view class="title">{{language.gyyy}}</view>
+      <view class="icon-last">
+        <image src="../../static/images/icon_my_forward@2x.png" mode="aspectFill"></image>
+      </view>
+    </view>
+  </view>
+</view>

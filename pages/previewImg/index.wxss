@@ -1,0 +1,9 @@
+/* pages/previewImg/index.wxss */
+.content{
+  padding-left: 1%
+}
+.img{
+  width: 24%;
+  height: 220rpx;
+  padding-right: 1%
+}

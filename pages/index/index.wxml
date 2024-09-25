@@ -1,0 +1,285 @@
+<!--index.wxml-->
+<view class="content" catchtap="hideWeather">
+    <!-- <view class="position-news" bindtap="routeHop" style="top:{{write[1]}}px;" data-page="/pages/newsTravel/index" catchtouchmove="touchmove" catch:touchmove>
+        <image src="../../static/img/information@1.5x.png"></image>
+    </view> -->
+    <!-- <movable-area class='move-area'>
+        <movable-view  direction="all" x="{{leftx}}" y="80">
+            <image src="../../static/img/newsx.png" bindtap="routeHop" data-page="/pages/newsTravel/index"></image>
+        </movable-view>
+    </movable-area>   -->
+     
+    <view class="swiper-view padding-bottom">
+        <swiper class="my-swiper" indicator-active-color="#ffffff" indicator-color='rgba(255,255,255,0.5)' indicator-dots='true' autoplay='true' interval='3000' duration='500' circular='true'>
+            <swiper-item class='my-swiper-item' wx:for="{{bannerList}}" wx:key='id' bindtap="goOutPage" data-id='{{item.ID}}' data-url='{{item.ContentUrl}}'>
+                <image src='{{item.ImageUrl}}'></image>
+            </swiper-item>
+        </swiper>
+        <view class="gold-content">
+            <view class="gold-content-1">
+                <view class="gold-item" bindtap="routeHop" data-page="/pages/areaDetail/index">
+                    <image src="../../static/img/details@1.5x.png"></image>
+                    <view>{{language.yjjs}}</view>
+                </view>
+                <view class="gold-item" bindtap="routeHop" data-page="/pages/newsTravel/index">
+                    <image src="../../static/img/information@1.5x.png"></image>
+                    <view>{{language.lyzx}}</view>
+                </view>
+                <view class="gold-item" bindtap="routeHop" data-page="/pages/scenic/index">
+                    <image src="../../static/img/guide@1.5x.png"></image>
+                    <view>{{language.jddl}}</view>
+                </view>
+                <view class="gold-item" bindtap="routeGoround">
+                    <image src="../../static/img/route@1.5x.png"></image>
+                    <view>{{language.lyxl}}</view>
+                </view>
+                <view class="gold-item" bindtap="routeHop" data-page="/pages/hotel/index">
+                    <image src="../../static/img/hotel@1.5x.png"></image>
+                    <view>{{language.jd}}</view>
+                </view>
+            </view>
+            <view class="gold-content-1 gold-content-2">
+                <view class="gold-item" bindtap="routeHop" data-page="/pages/restaurant/index">
+                    <image src="../../static/img/catering@1.5x.png"></image>
+                    <view>{{language.cy}}</view>
+                </view>
+                <view class="gold-item" bindtap="routeHop" data-page="/pages/specialty/index">
+                    <image src="../../static/img/specialty@1.5x.png"></image>
+                    <view>{{language.tc}}</view>
+                </view>
+                <view class="gold-item" bindtap="routeHop" data-page="/pages/traffic/index">
+                    <image src="../../static/img/traffic@1.5x.png"></image>
+                    <view>{{language.jt}}</view>
+                </view>
+                <view class="gold-item" bindtap="routeHop" data-page="/pages/yule/index">
+                    <image src="../../static/img/recreation@1.5x.png"></image>
+                    <view>{{language.yl}}</view>
+                </view>
+                <view class="gold-item" bindtap="routeHop" data-page="/pages/culture/index">
+                    <image src="../../static/img/lavatory@1.5x.png"></image>
+                    <view>{{language.mswh}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+  <!-- <view class="top">
+    <image class="back-img" mode="aspectFill" src="{{area.imageUrl}}"></image>
+    <view class="top-content">
+      <text class="title" bindtap="routeHop" data-page="/pages/areaDetail/index">{{area.name}}</text>
+      <view class="weather">
+        <view class="today" catchtap="showList">
+          <view class="day-weather">
+            <view class="day">{{weatherList[0].day}}</view>
+            <view class="img-box">
+              <image class="wea-img" mode="aspectFill" src="{{weatherList[0].wea_img}}"></image>
+            </view>
+            <view class="tem-box">
+              <text class="h-tem">{{weatherList[0].tem1}}</text> 
+              <text>~</text>
+              <text class="l-tem">{{weatherList[0].tem2}}</text>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{isShow}}" class="day-list" animation="{{weather_list}}">
+          <block wx:for="{{weatherList}}" :key="date">
+            <view class="day-weather">
+              <view class="day">{{item.day}}</view>
+              <view class="img-box">
+                <image class="wea-img" mode="aspectFill" src="{{item.wea_img}}"></image>
+              </view>
+              <view class="tem-box">
+                <text class="h-tem">{{item.tem1}}</text>
+                <text>~</text>
+                <text class="l-tem">{{item.tem2}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class="features">
+        <text class="features-title">{{area.brightSpot}}</text>
+      </view>
+
+      <view class="search" bindtap="routeHop" data-page="/pages/search/index">
+        <text class="tip">{{language.ssgzxxgxx}}</text>
+        <image class="search-img" mode="aspectFill" src="../../static/images/icon_search@2x.png"></image>
+      </view>
+
+      <view class="list">
+        <view class="item" bindtap="routeHop" data-page="/pages/newsTravel/index">
+          <image class="item-img" mode="aspectFill" src="../../static/images/icon_news@2x.png"></image>
+          <view class="item-title hidden1">{{language.lyzx}}</view>
+        </view>
+        
+        <view class="item" bindtap="gotoDetail" data-id="26bbec4e-ecd3-4fd7-8e7b-1fc1968d0fc1" data-url="/pages/scenicDetail/index">
+          <image class="item-img" mode="aspectFill" src="../../static/images/icon_city@2x.png"></image>
+          <view class="item-title hidden1">{{language.sgewc}}</view>
+        </view>
+        <view class="item" bindtap="gotoDetail" data-id="b9fdb184-1dd0-45ff-b983-64dccfe82b88" data-url="/pages/scenicDetail/index">
+          <image class="item-img" mode="aspectFill" src="../../static/images/icon_kardze@2x.png"></image>
+          <view class="item-title hidden1">{{language.gzs}}</view>
+        </view>
+        
+        <view class="item" bindtap="gotoDetail" data-id="d4c3400a-2c8b-4445-bd42-949b212a671e" data-url="/pages/scenicDetail/index">
+          <image class="item-img" mode="aspectFill" src="../../static/images/icon_temple@2x.png"></image>
+          <view class="item-title hidden1">{{language.bls}}</view>
+        </view>
+        <view class="item" bindtap="routeHop" data-page="/pages/service/index">
+          <image class="item-img" mode="aspectFill" src="../../static/images/icon_service@2x.png"></image>
+          <view class="item-title hidden1">{{language.bdfw}}</view>
+        </view>
+      </view>
+      <view class="news" bindtap="routeHop" data-page="/pages/newsTravel/index">
+      <view class="news-content">
+        <swiperTitle titleList="{{newsList}}" sHeight="80rpx"></swiperTitle>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
+  <view class="scenic padding-bottom">
+    <view class="type-tip">
+      <text class="title">{{language.bqjd}}</text>
+      <text class="more" bindtap="routeHop" data-page="/pages/scenic/index">{{language.gd}}</text>
+    </view>
+    <view class="type-content">
+      <view class="item" wx:for="{{scenicList2}}" wx:key="id" bindtap="gotoDetail" data-id="{{item.ID}}" data-url="/pages/scenicDetail/index">
+        <image class="item-img" mode="aspectFill" src="{{item.ImageUrl}}"></image>
+        <view class="item-title hidden1">{{item.Name}}</view>
+        <view class="item-rating">
+
+          <star rating="{{item.Rating}}" title="{{language.tjzs}}" />
+        </view>
+        <view class="item-describe hidden2">
+          <block wx:if="{{item.Brief}}">{{item.Brief}}</block>
+        </view>
+      </view>
+    </view> 
+  </view>
+    <!-- 推荐线路 -->
+  <view class="scenic padding-bottom">
+    <view class="type-tip">
+      <text class="title">{{language.tjxl}}</text>
+      <text class="more" bindtap="routeGoround">{{language.gd}}</text>
+    </view>
+    <view class="type-list">
+        <view class="type-list-item" wx:for="{{routeList}}" wx:key="id" data-id="{{item.ID}}" catchtap="goRouteDetail" data-page="/pages/routerDetail/index" >
+            <image mode="aspectFill" src="{{item.ImageUrl}}" class="type-list-item-img"></image>
+            <view class="item-brief hidden2">{{item.Brief}}</view>
+            <view class="item-name-position">{{item.Name}}</view>
+        </view>
+    </view>
+  </view>
+  <!-- 热门酒店 -->
+  <view class="scenic padding-bottom">
+    <view class="type-tip">
+      <text class="title">{{language.rmjd}}</text>
+      <text class="more" bindtap="routeHop" data-page="/pages/hotel/index">{{language.gd}}</text>
+    </view>
+    <view class="type-list type-list-hotel">
+        <view class="type-list-hotel-item" bindtap="gotoDetail" wx:for="{{hotelList2}}" data-id="{{item.ID}}" wx:key="id" data-url="/pages/hotelDetail/index">
+            <image mode="aspectFill" src="{{item.ImageUrl}}"></image>
+            <view class="type-list-hotel-item-name">{{item.Name}}</view>
+        </view>
+    </view>
+  </view>
+  <!-- 特色餐饮 -->
+  <view class="scenic padding-bottom">
+    <view class="type-tip type-tip-1">
+      <text class="title">{{language.tscy}}</text>
+      <text class="more" bindtap="routeHop" data-page="/pages/restaurant/index">{{language.gd}}</text>
+    </view>
+    <view class="type-list type-list-hotel">
+        <view class="type-list-hotel-item" bindtap="gotoDetail" wx:for="{{restaurantList2}}" data-id="{{item.ID}}" wx:key="id" data-url="/pages/restaurantDetail/index">
+            <image mode="aspectFill" src="{{item.ImageUrl}}"></image>
+            <view class="type-list-hotel-item-name">{{item.Name}}</view>
+        </view> 
+    </view>
+  </view>
+
+
+  <!-- <view class="scenic padding-bottom">
+    <view class="type-tip">
+      <text class="title">{{language.mswh}}</text>
+      <text class="more" bindtap="routeHop" data-page="/pages/culture/index">{{language.ckgd}}</text>
+    </view>
+    <view class="type-content">
+      <view class="item" wx:for="{{cultureList}}" wx:key="id" bindtap='gotoActivity' data-url='{{item.contentUrl}}' data-title="{{item.name}}">
+        <image class="item-img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+        <view class="item-title hidden1">{{item.name}}</view>
+        <view class="item-describe hidden2">
+          <block wx:if="{{item.brief}}">{{item.brief}}</block>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+
+  <view class="scenic padding-bottom">
+    <view class="type-tip">
+      <text class="title">{{language.jdtj}}</text>
+      <text class="more" bindtap="routeHop" data-page="/pages/hotel/index">{{language.ckgd}}</text>
+    </view>
+    <view class="type-content">
+      <view class="item" wx:for="{{hotelList}}" wx:key="id" bindtap="gotoDetail" data-id="{{item.id}}" data-url="/pages/hotelDetail/index">
+        <image class="item-img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+        <view class="item-title hidden1">{{item.name}}</view>
+        <view class="item-describe hidden2">
+          <block wx:if="{{item.brief}}">{{item.brief}}</block>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
+  <!-- <view class="scenic padding-bottom">
+    <view class="type-tip">
+      <text class="title">{{language.tscy}}</text>
+      <text class="more" bindtap="routeHop" data-page="/pages/restaurant/index">{{language.ckgd}}</text>
+    </view>
+    <view class="type-content">
+      <view class="item" wx:for="{{restaurantList}}" wx:key="id" bindtap="gotoDetail" data-id="{{item.id}}" data-url="/pages/restaurantDetail/index">
+        <image class="item-img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+        <view class="item-title hidden1">{{item.name}}</view>
+        <view class="item-describe hidden2">
+          <block wx:if="{{item.brief}}">{{item.brief}}</block>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
+
+  <!-- <view class="scenic padding-bottom">
+    <view class="type-tip">
+      <text class="title">{{language.ddtc}}</text>
+      <text class="more" bindtap="routeHop" data-page="/pages/specialty/index">{{language.ckgd}}</text>
+    </view>
+    <view class="type-content">
+      <view class="item" wx:for="{{productList}}" wx:key="id" bindtap="gotoDetail" data-id="{{item.id}}" data-url="/pages/specialtyDetail/index">
+        <image class="item-img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+        <view class="item-title hidden1">{{item.name}}</view>
+        <view class="item-describe hidden2">
+          <block wx:if="{{item.brief}}">{{item.brief}}</block>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
+  <!-- <view class="scenic padding-bottom">
+    <view class="type-tip">
+      <text class="title">{{language.bdfw}}</text>
+      <text class="more" bindtap="routeHop" data-page="/pages/service/index">{{language.ckgd}}</text>
+    </view>
+    <view class="type-content">
+      <view class="item" wx:for="{{serviceList}}" wx:key="id" bindtap='gotoActivity' data-url='{{item.contentUrl}}' data-title="{{item.name}}">
+        <image class="item-img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+        <view class="item-title hidden1">{{item.name}}</view>
+        <view class="item-describe hidden2">
+          <block wx:if="{{item.brief}}">{{item.brief}}</block>
+        </view>
+      </view>
+    </view>
+  </view> -->
+    
+</view>

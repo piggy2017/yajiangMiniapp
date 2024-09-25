@@ -1,0 +1,72 @@
+<view class="content">
+  <swiperImg sHeight="480rpx" imgList="{{imageList}}" shuffling="{{shuffling}}"></swiperImg>
+  <view class="container1">
+    
+    <view class="hotel-name">{{name}}</view>
+
+    <view class="address-box" bindtap="gotoMap">
+      <image class="img" mode="aspectFill" src="../../static/images/icon_map_details@2x.png"></image>
+      <view class="address hidden1">
+        {{address}}
+      </view>
+      <image class="down-img" mode="aspectFill" src="../../static/images/icon_down@2x.png"></image>
+    </view>
+
+    <view wx:if="{{telephone}}" class="phone-box" bindtap="makePhoneCall" data-phone="{{telephone}}">
+      <image class="img" mode="aspectFill" src="../../static/images/icon_phone@2x.png"></image>
+      <view class="phone hidden1">
+        {{telephone}}
+      </view>
+      <image class="down-img" mode="aspectFill" src="../../static/images/icon_down@2x.png"></image>
+    </view>
+
+    <view class="phone-box" bindtap='gotoActivity' data-url='{{contentUrl}}' data-title="{{language.jdxxms}}">
+      <image class="img" mode="aspectFill" src="../../static/images/icon_Introduction@2x.png"></image>
+      <view class="phone hidden1">
+        {{language.jdxxms}}
+      </view>
+      <image class="down-img" mode="aspectFill" src="../../static/images/icon_down@2x.png"></image>
+    </view>
+
+
+  </view>
+  <view class="room-box">
+    <view class="room" wx:for="{{roomList}}" wx:key="id">
+      <image class="room-img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+      <view class="room-content">
+        <view class="room-name">{{item.name}}</view>
+        <block wx:if="{{item.brief}}">
+        <view class="room-brief">{{item.brief}}</view>
+        </block>
+        
+      </view>
+    </view>
+  </view>
+
+  <view class="scenic padding-bottom">
+    <view class="type-tip">
+      <text class="title">{{language.zbjq}}</text>
+    </view>
+    <view class="type-content">
+      <view class="item" wx:for="{{scenicListNearby}}" wx:key="id" bindtap="gotoDetail" data-id="{{item.id}}" data-url="/pages/scenicDetail/index">
+        <image class="item-img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+        <view class="item-title hidden1">{{item.name}}</view>
+        <view class="item-describe hidden2">{{item.brief}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="scenic padding-bottom" wx:if="{{nearbyRecommendList.length>0}}">
+    <view class="type-tip">
+      <text class="title">{{language.zbtj}}</text>
+      <text class="more">{{language.ckxq}}</text>
+    </view>
+    <view class="type-content">
+      <view class="item" wx:for="{{nearbyRecommendList}}" wx:key="id" bindtap='gotoActivity' data-url='{{item.contentUrl}}' data-title="{{item.name}}">
+        <image class="item-img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+        <view class="item-title hidden1">{{item.name}}</view>
+        <view class="item-describe hidden2">{{item.brief}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,10 @@
+<view class="content">
+  <swiperImg sHeight="480rpx" imgList="{{imageList}}" shuffling="{{shuffling}}"></swiperImg>
+  <view class="restaurant-name">{{name}}</view>
+  <view class="room-box">
+  <import src="../../wxParse/wxParse.wxml" />
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+
+
+</view>

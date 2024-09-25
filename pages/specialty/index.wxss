@@ -1,0 +1,25 @@
+/* pages/scenic/index.wxss */
+.container{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40rpx 30rpx 30rpx 30rpx;
+
+}
+.item{
+  width: 50%;
+  text-align: center;
+  padding-top: 40rpx;
+}
+.item .item-img{
+  width: 335rpx;
+  height: 220rpx;
+  border-radius: 8rpx;
+}
+.item .item-name{
+  color: #222222;
+  font-size: 17px;
+  width: 100%;
+  padding-top: 20rpx;
+}

@@ -1,0 +1,49 @@
+<!--pages/map/index.wxml  longitude="100.01419" latitude="31.60884"-->
+<map id="map" longitude="101.014425" latitude="30.031533" scale="12" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 100%; position: absolute;">
+  <cover-view class="right_box">
+    <cover-view class="tabBox">
+      <cover-view class="tabEvery" wx:for="{{tabList}}" wx:key="id" bindtap="changeTab" data-current="{{item.type}}" data-index='{{item.id}}' data-source='{{item.clickSource}}'>
+        <cover-image src="{{item.imgUrl}}" hidden="{{item.type!=0}}"></cover-image>
+        <cover-image src="{{item.activeImg}}" hidden="{{item.type!=1}}"></cover-image>
+      </cover-view>
+    </cover-view>
+    <cover-view class="current">
+      <cover-image bindtap="moveToLocation" src="../../static/images/icon_map_location@2x(1).png"></cover-image>
+    </cover-view>
+  </cover-view>
+
+  <cover-view class="handle_map">
+    <cover-image class="handle_map_icon" bindtap="goToHandleMap" data-url='{{handMapUrl}}' src="../../static/icons/shouhuiditu.png"></cover-image>
+    <cover-view>手绘地图</cover-view>
+  </cover-view>
+
+  <cover-view class="content_box" wx:if="{{contentShow}}">
+    <cover-view class="content_box_every">
+      <cover-view class="content_box_img">
+        <cover-image src="{{detailInfo.imageUrl}}"></cover-image>
+      </cover-view>
+      <cover-view class="content_box_info">
+        <cover-view class="right_info right_info_1">{{detailInfo.name}}</cover-view>
+        <cover-view class="right_info right_info_2">{{detailInfo.address}}</cover-view>
+        <cover-view class="right_info right_info_3">{{language.jl}}：{{distance}} (m)</cover-view>
+      </cover-view>
+    </cover-view>
+    <cover-view class="content_box_close">
+      <cover-image bindtap="closeContent" src="../../static/images/icon_map_close@2x.png"></cover-image>
+    </cover-view>
+    <cover-view class="content_box_every">
+      <cover-view class="content_box_imgs">
+      </cover-view>
+      <cover-view class="content_box_btn">
+        <cover-view class="right_info_check" bindtap="checkDetail">
+          <cover-image src="../../static/images/icon_map_Introduction@2x.png"></cover-image>
+          <cover-view>{{language.ckxq}}</cover-view>
+        </cover-view>
+        <cover-view class="right_info_check" bindtap="openLocation">
+          <cover-image src="../../static/images/icon_navigation@2x.png"></cover-image>
+           <cover-view>{{language.dh}}</cover-view>
+        </cover-view>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+</map>

@@ -1,0 +1,12 @@
+<view class="container1">
+  <view class="item" wx:for="{{restaurantList}}" wx:key="id" bindtap="gotoDetail" data-id="{{item.id}}">
+    <image class="item-img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+    <view class="item-right">
+      <view class="item-name">{{item.name}}</view>
+      <view class="item-describe hidden3">
+        <block wx:if="{{item.brief}}">{{item.brief}}</block>
+      </view>
+    </view>
+    
+  </view>
+</view> 

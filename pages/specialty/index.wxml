@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="item" wx:for="{{specialtyList}}" wx:key="id" bindtap="gotoDetail" data-id="{{item.id}}">
+    <image class="item-img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+    <view class="item-name">{{item.name}}</view>
+    
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<view class="content">
+  <swiperImg sHeight="480rpx" imgList="{{ImageList}}" shuffling="{{shuffling}}"></swiperImg>
+  <view class="container1">
+    
+    <view class="restaurant-name">{{Name}}</view>
+
+    <view class="address-box" bindtap="gotoMap">
+      <image class="img" mode="aspectFill" src="../../static/images/icon_map_details@2x.png"></image>
+      <view class="address hidden1">
+        {{Address}}
+      </view>
+      <image class="down-img" mode="aspectFill" src="../../static/images/icon_down@2x.png"></image>
+    </view>
+
+    <view wx:if="{{Telephone}}" class="phone-box" bindtap="makePhoneCall">
+      <image class="img" mode="aspectFill" src="../../static/images/icon_phone@2x.png"></image>
+      <view class="phone hidden1">
+        {{Telephone}}
+      </view>
+      <image class="down-img" mode="aspectFill" src="../../static/images/icon_down@2x.png"></image>
+    </view>
+
+  </view>
+  <view class="room-box">
+    <import src="../../wxParse/wxParse.wxml" />
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+</view>

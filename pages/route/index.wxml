@@ -1,0 +1,18 @@
+<!--pages/route/index.wxml-->
+<view>
+  <scroll-view wx:if="{{query.length>0}}" scroll-x class="scroll-x">
+  <view wx:for="{{query}}" wx:key="{{days}}" class="view-parent">
+    <view bindtap="changeDays" data-days="{{item.days}}" class="view-item {{days==item.days?'active':''}}">{{item.title}}</view>
+  </view>
+</scroll-view>
+  <view class="content-box" catchtap="routeHop" data-page="/pages/routerDetail/index" 
+    wx:for="{{routeList}}" wx:key="id" data-id="{{item.id}}"
+  >
+  <view class="img-box">
+    <image src="{{item.imageUrl}}"></image>
+    <view class="content-title">{{item.name}}</view>
+  </view>
+    
+    <view class="content-detail">{{item.brief}}</view>
+  </view>
+</view>

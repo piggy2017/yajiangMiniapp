@@ -1,0 +1,9 @@
+/* my-components/star/index.wxss */
+.title{
+  padding-right: 10rpx;
+}
+.item-img{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 14rpx;
+}

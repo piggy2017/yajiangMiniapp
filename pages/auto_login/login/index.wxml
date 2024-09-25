@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="form">
+    <input placeholder="{{language.dlm}}" bindblur="bindBlur" data-field="loginName" placeholder-class="placeholder"></input>
+    <input placeholder="{{language.mm}}" bindblur="bindBlur" data-field="password"   password="true" placeholder-class="placeholder"></input>
+  </view>
+  <view class="forget-pw" bindtap="gotoUpdate">{{language.wjmm}}</view>
+  <view class="btn-box">
+    <view class="login-btn" bindtap="handleLogin">{{language.dl}}</view>
+  </view>
+  <view class="register-box">
+    <text>{{language.hmyzh}}</text>
+    <text class="register" bindtap="gotoPage">{{language.ljzc}}</text>
+  </view>
+  <view hidden="{{!verify}}" class="dialog">
+    {{message}}
+  </view>
+</view>

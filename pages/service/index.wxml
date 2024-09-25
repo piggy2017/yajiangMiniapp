@@ -1,0 +1,9 @@
+<view class="container1">
+  <view class="item" wx:for="{{serviceList}}" wx:key="id" bindtap='gotoActivity' data-url='{{item.contentUrl}}' data-title="{{item.name}}">
+    <image class="item-img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+    <view class="item-name">{{item.name}}</view>
+    <view class="item-describe hidden2">
+      <block wx:if="{{item.brief}}">{{item.brief}}</block>
+    </view>
+  </view>
+</view>

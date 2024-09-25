@@ -1,0 +1,99 @@
+<!--index.wxml-->
+<view class="content" catchtap="hideWeather">
+  <!-- <view class="position-news" bindtap="routeHop" style="top:{{write[1]}}px;" data-page="/pages/newsTravel/index" catchtouchmove="touchmove" catch:touchmove>
+        <image src="../../static/img/information@1.5x.png"></image>
+    </view> -->
+  <!-- <movable-area class='move-area'>
+        <movable-view  direction="all" x="{{leftx}}" y="80">
+            <image src="../../static/img/newsx.png" bindtap="routeHop" data-page="/pages/newsTravel/index"></image>
+        </movable-view>
+    </movable-area>   -->
+
+  <view class="swiper-view">
+    <swiper class="my-swiper" bindchange='changeIndex' autoplay='true' interval='3000' duration='500' circular='true'>
+      <swiper-item class='my-swiper-item' wx:for="{{bannerList}}" wx:key='id' bindtap="gotoDetail" data-id="{{item.ResId}}" data-url="/pages/scenicDetail/index" >
+        <image src='{{item.ImageUrl}}'></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="swiper_dots" wx:if="{{bannerList.length > 0}}">
+    <view wx:for="{{bannerList}}" class='dots_wrapper'>
+      <view class="dot_active" wx:if='{{swiperIndex===index}}'></view>
+      <view class="dot_default" wx:else></view>
+    </view>
+  </view>
+
+  <!-- 金刚导航区 -->
+  <view class="navigation_area">
+    <view class="navigation_area_item" data-page="/pages/scenic/index" bindtap="routeHop">
+      <image src="../../static/icons/jingdiandaolan.png"></image>
+      <view>{{language.jddl}}</view>
+    </view>
+    <view class="navigation_area_item" bindtap="routeGoround">
+      <image src="../../static/icons/lvyouxianlu.png"></image>
+      <view>{{language.lyxl}}</view>
+    </view>
+    <view class="navigation_area_item" bindtap="routeHop" data-page="/pages/restaurant/index">
+      <image src="../../static/icons/canying.png"></image>
+      <view>{{language.tscy}}</view>
+    </view>
+    <view class="navigation_area_item" bindtap="routeHop" data-page="/pages/hotel/index">
+      <image src="../../static/icons/jiudiantuijian.png"></image>
+      <view>{{language.jdtj}}</view>
+    </view>
+  </view>
+  <!-- 九宫格导航区 -->
+  <view class="box_grid">
+    <view class="box_grid_item" bindtap="routeHop" data-page="/pages/areaDetail/index">
+      <image src="../../static/icons/jieshao.png"></image>
+      <view>{{language.yjjs}}</view>
+    </view>
+    <view class="box_grid_item" bindtap="routeHop" data-page="/pages/newsTravel/index">
+      <image src="../../static/icons/zixun.png"></image>
+      <view>{{language.lyzx}}</view>
+    </view>
+    <view class="box_grid_item" bindtap="routeHop" data-page="/pages/specialty/index">
+      <image src="../../static/icons/techan.png"></image>
+      <view>{{language.bdtc}}</view>
+    </view>
+    <view class="box_grid_item" bindtap="routeHop" data-page="/pages/traffic/index">
+      <image src="../../static/img/traffic@1.5x.png"></image>
+      <view>{{language.jtxx}}</view>
+    </view>
+
+    <view class="box_grid_item" bindtap="routeHop" data-page="/pages/yule/index">
+      <image src="../../static/icons/yule.png"></image>
+      <view>{{language.ylxm}}</view>
+    </view>
+    <view class="box_grid_item" bindtap="routeHop" data-page="/pages/culture/index">
+      <image src="../../static/icons/minsu.png"></image>
+      <view>{{language.mswh}}</view>
+    </view>
+    <view class="box_grid_item" data-source='PublicRestroom' bindtap="routeMap">
+      <image src="../../static/icons/lvyoucesuo.png"></image>
+      <view>{{language.lycs}}</view>
+    </view>
+    <view class="box_grid_item" bindtap="goOutPage"  data-url='{{handMapUrl}}'>
+      <image src="../../static/icons/shouhuiditu.png"></image>
+      <view>{{language.shdt}}</view>
+    </view>
+
+    <view class="box_grid_item" data-source='Hospital' bindtap="routeMap">
+      <image src="../../static/icons/yaodian.png"></image>
+      <view>{{language.ylyd}}</view>
+    </view>
+    <view class="box_grid_item" data-source='PetrolStation' bindtap="routeMap">
+      <image src="../../static/icons/jiayouzhan.jpg"></image>
+      <view>{{language.jyz}}</view>
+    </view>
+    <view class="box_grid_item" bindtap="routeHop" data-page="/pages/service/index">
+      <image src="../../static/images/icon_service@2x.png"></image>
+      <view>{{language.bdfw}}</view>
+    </view>
+    <view class="box_grid_item" bindtap="goOutPage"  data-url='{{commonComplaint.contentUrl}}' data-title="{{commonComplaint.title}}">
+      <image src="../../static/icons/tousu.png"></image>
+      <view>{{language.tsjy}}</view>
+    </view>
+  </view>
+</view>

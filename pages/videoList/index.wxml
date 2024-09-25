@@ -1,0 +1,17 @@
+<view class="container">
+<view class="video-box" wx:for="{{videoList}}" wx:key="item.id">
+  <video  wx:if='{{playIndex==index}}' class="video" src="{{item.videoUrl}}" show-center-play-btn loop="true" id="index{{index}}"></video>
+  <view style="display: {{ playIndex == index ? 'none' : 'block' }};"> 
+        <view class="controls pr" id="controls" >   <!--视频 封面图片 -->  
+          <image src="{{item.imageUrl}}" style='width:100%;height:480rpx;'/>
+        </view>
+        <!-- 中间的播放图片标志 -->
+        <view class="play-box" style="z-index:200;" id='{{index}}' bindtap="videoPlay">
+          <image data-id="1" src="../../static/images/icon_video_play@2x.png" style="width:160rpx;height:160rpx;"/>
+        </view>
+        
+  <text class="title">{{item.name}}</text>
+      </view>
+</view>
+  
+</view>

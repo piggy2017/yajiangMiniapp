@@ -1,0 +1,5 @@
+<view class="content">
+  <block wx:for="{{imgList}}" wx:key="id">
+    <image bindtap="previewImg" data-url="{{item.imageUrl}}" class="img" mode="aspectFill" src="{{item.imageSmallUrl}}"></image>
+  </block>
+</view>

@@ -1,0 +1,14 @@
+<view class="container1">
+  <view class="item" wx:for="{{scenicList}}" wx:key="id" bindtap="gotoDetail" data-id="{{item.id}}">
+  <view class="img-box">
+  <image class="item-img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+    <view class="item-name">{{item.name}}</view>
+  </view>
+    
+    <view class="item-rating">
+
+      <star rating="{{item.rating}}" title="{{language.tjzs}}" />
+    </view>
+    <view class="item-describe hidden2"><block wx:if="{{item.brief}}">{{item.brief}}</block></view>
+  </view>
+</view>

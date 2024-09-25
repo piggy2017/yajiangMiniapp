@@ -1,0 +1,9 @@
+<view class="container1">
+  <view class="item" wx:for="{{cultureList}}" wx:key="id" data-title="{{item.name}}" bindtap='gotoActivity' data-url='{{item.contentUrl}}'>
+    <image class="item-img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+    <view class="item-name">{{item.name}}</view>
+    <view class="item-describe hidden2">
+      <block wx:if="{{item.brief}}">{{item.brief}}</block>
+    </view>
+  </view>
+</view>

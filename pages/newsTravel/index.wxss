@@ -1,0 +1,30 @@
+/* pages/newsTravel/index.wxss */
+.item{
+  padding-top: 40rpx;
+  border-bottom:1px solid #ECEDF2;
+}
+.item .title-box{
+  color: #222222;
+  font-size: 17px;
+  display: flex;
+  align-items: center
+}
+.item .title-box .news-img{
+  width: 14rpx;
+  height: 14rpx;
+  padding-right: 20rpx;
+}
+.item .title-box .title{
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+.floor{
+  padding-top: 40rpx;
+  padding-bottom: 20rpx;
+  color: #BBBBBB;
+  font-size: 12px;
+}
+.floor .date{
+  float: right;
+}

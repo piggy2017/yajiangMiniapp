@@ -1,0 +1,92 @@
+{
+  "pages": [
+    "pages/newIndex/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/route/index",
+    "pages/map/index",
+    "pages/user/index",
+    "pages/out/index",
+    "pages/search/index",
+    "pages/newsTravel/index",
+    "pages/scenic/index",
+    "pages/previewImg/index",
+    "pages/scenicDetail/index",
+    "pages/gesaer/index",
+    "pages/culture/index",
+    "pages/hotel/index",
+    "pages/hotelDetail/index",
+    "pages/areaDetail/index",
+    "pages/service/index",
+    "pages/restaurant/index",
+    "pages/specialty/index",
+    "pages/restaurantDetail/index",
+    "pages/specialtyDetail/index",
+    "pages/scenicCollect/index",
+    "pages/routeCollect/index",
+    "pages/routerDetail/index",
+    "pages/auto_login/create/index",
+    "pages/auto_login/login/index",
+    "pages/auto_login/info/index",
+    "pages/auto_login/update/index",
+    "pages/videoList/index",
+    "pages/mapDetail/index",
+    "pages/traffic/index",
+    "pages/yule/index",
+    "pages/trafficDetail/index",
+    "pages/yuleDetail/index"
+  ],
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.3",
+      "provider": "wx069ba97219f66d99"
+    }
+  },
+  
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#5263FF",
+    "color": "#666",
+    "list": [
+      {
+        "pagePath": "pages/newIndex/index",
+        "iconPath": "static/images/icon_home@2x.png",
+        "selectedIconPath": "static/images/icon_home_selected@2x.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/route/index",
+        "iconPath": "static/images/icon_route@2x.png",
+        "selectedIconPath": "static/images/icon_route_selected@2x.png",
+        "text": "线路"
+      },
+      {
+        "pagePath": "pages/map/index",
+        "iconPath": "static/images/icon_map@2x.png",
+        "selectedIconPath": "static/images/icon_map_selected@2x.png",
+        "text": "地图"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "static/images/icon_my@2x.png",
+        "selectedIconPath": "static/images/icon_my_selected@2x.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于获取周边服务"
+    }
+  },
+  "requiredPrivateInfos":["getLocation"]
+}

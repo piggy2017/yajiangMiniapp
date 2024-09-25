@@ -1,0 +1,13 @@
+<!--pages/route/index.wxml-->
+<view>
+  <view class="content-box" catchtap="routeHop" data-page="/pages/routerDetail/index" 
+    wx:for="{{routerList}}" wx:key="id" data-id="{{item.id}}"
+  >
+  <view class="img-box">
+    <image src="{{item.imageUrl}}"></image>
+    <view class="content-title">{{item.name}}</view>
+  </view>
+    
+    <view class="content-detail">{{item.brief}}</view>
+  </view>
+</view>

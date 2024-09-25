@@ -1,0 +1,38 @@
+/* pages/scenic/index.wxss */
+.container1{
+  background-color: #fff;
+}
+.item{
+  background-color: #fff;
+  padding: 40rpx 0;
+  position: relative;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #ECEDF2;
+}
+.item .item-img{
+  width: 300rpx;
+  height: 180rpx;
+  border-radius: 8rpx;
+}
+.item .item-right{
+  width: 360rpx;
+  padding-left: 60rpx;
+  height: 180rpx;
+}
+.item .item-name{
+  color: #222222;
+  font-size: 17px;
+  width: 100%;
+  padding-bottom: 30rpx;
+}
+.item .item-rating{
+  padding: 10rpx 25rpx;
+  color: #333333;
+  font-size: 14px;
+}
+.item .item-describe{
+  color: #666666;
+  font-size: 14px;
+}

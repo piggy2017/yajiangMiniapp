@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "star": "../../my-components/star/index",
+    "swiperTitle": "../../my-components/swiper_title/index"
+  },
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "disableScroll":true,
+  "enablePullDownRefresh": false
+}

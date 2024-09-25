@@ -1,0 +1,95 @@
+.content {
+  background-color: #ecedf2;
+  height: 100vh;
+}
+
+.form {
+  width: 100%;
+  background-color: #5d7aff;
+  padding: 10rpx 20rpx;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+.form .search-box {
+  width: 76%;
+  background-color: rgba(00, 00, 00, 0.2);
+  float: left;
+  padding: 16rpx 0 16rpx 20rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.form .search-img {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.form .info-input {
+  padding-left: 20rpx;
+  width: calc(100% - 50rpx);
+  height: 60rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.form .placeholder {
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.form .search-title {
+  padding-left: 28rpx;
+  font-size: 17px;
+  color: #fff;
+}
+.result{
+  padding-top: 112rpx;
+  overflow: scroll;
+}
+.result .news {
+  background-color: #fff;
+  padding: 34rpx 30rpx 0 30rpx;
+}
+
+.result .tip {
+  color: #868791;
+  font-size: 19px;
+  padding-bottom: 10rpx;
+  display: block;
+}
+
+.result .title {
+  padding: 23rpx 0;
+  color: #222;
+  font-size: 15px;
+  border-bottom: 1px solid #ecedf2;
+  overflow: hidden; /*超出部分隐藏*/
+  white-space: nowrap; /*不换行*/
+  text-overflow: ellipsis; /*超出部分文字以...显示*/
+}
+
+.result .res {
+  background-color: #fff;
+  padding: 34rpx 30rpx 0 30rpx;
+  margin-top: 10rpx;
+}
+
+.result .title-box {
+  padding: 23rpx 0;
+  border-bottom: 1px solid #ecedf2;
+}
+
+.result .title-box .name {
+  color: #222;
+  font-size: 15px;
+}
+
+.result .title-box .brief {
+  color: #868791;
+  font-size: 12px;
+  padding-top: 10rpx;
+}

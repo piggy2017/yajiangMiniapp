@@ -1,0 +1,96 @@
+<view class="container">
+
+  <view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+    <view class="custom-content">
+      <image class="custom-back-img" mode="aspectFill" src="../../static/images/icon_return@2x.png" bindtap="gotoBack"></image>
+      <view class="custom-name hidden1">{{name}}</view>
+      
+      <image class="custom-like-img" mode="aspectFill" wx:if="{{isCollection}}" src="../../static/images/icon_like_selected@2x.png" bindtap="handleCollection"></image>
+      <image class="custom-like-img" mode="aspectFill" wx:else src="../../static/images/icon_like@2x.png" bindtap="handleCollection"></image>
+    </view>
+
+  </view>
+  <view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+  <swiperImg sHeight="480rpx" imgList="{{imageList}}" shuffling="{{shuffling}}"></swiperImg>
+  <view class="container1">
+    <view class="rating">
+      <image class="img" mode="aspectFill" src="../../static/images/icon_recommend@2x.png"></image>
+      <star class="star" rating="{{rating}}" title="{{language.tjzs}}" />
+      <image bindtap="changeVoiceType" class="down-img" mode="aspectFill" src="{{voiceImgUrl}}"></image>
+    </view>
+
+    <view class="address-box" bindtap="gotoMap" data-lat="{{lat}}" data-lng="{{lng}}">
+      <image class="img" mode="aspectFill" src="../../static/images/icon_map_details@2x.png"></image>
+      <view class="address hidden1">
+        {{address}}
+      </view>
+      <image class="down-img" mode="aspectFill" src="../../static/images/icon_down@2x.png"></image>
+    </view>
+
+    <view wx:if="{{vrUrl}}" class="address-box" bindtap="gotoVr" data-url='{{vrUrl}}'>
+      <image class="img" mode="aspectFill" src="../../static/icons/vrIcon.png"></image>
+      <view class="address hidden1">
+        720在线观景
+      </view>
+      <image class="down-img" mode="aspectFill" src="../../static/images/icon_down@2x.png"></image>
+    </view>
+  </view>
+
+
+
+  <view class="detail">
+    <view class="item clearfix">
+
+      <view class="title">{{language.xqjs}}</view>
+      <view class="hidden7 brief">{{brief}}</view>
+
+      <text class="detail-introduce" bindtap='gotoActivity' data-url='{{contentUrl}}' data-title="{{name}}">{{language.xqjs}}>></text>
+    </view>
+
+    <view class="item" wx:for="{{scenicDesList}}" wx:key="item.title">
+      <view class="title">{{item.title}}</view>
+      <view class="content">
+        <view class="son-item" wx:for="{{item.items}}" wx:for-item="sonItem" wx:key="sonItem">
+          <text class="point"></text>
+          <text class="word">{{sonItem}}</text>
+
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+  <!-- <view class="scenic padding-bottom">
+    <view class="type-tip">
+      <text class="title">酒店推荐</text>
+      <text class="more" bindtap="routeHop" data-page="/pages/hotel/index">查看全部</text>
+    </view>
+    <view class="type-content">
+      <view class="item" wx:for="{{hotelListNearby}}" wx:key="id" bindtap="gotoDetail" data-id="{{item.id}}" data-url="/pages/hotelDetail/index">
+        <view class="img-box">
+          <image class="item-img" mode="aspectFill" src="{{item.imageUrl}}"></image>
+          <view class="item-title hidden1">{{item.name}}</view>
+        </view>
+
+        <view class="item-describe hidden2">{{item.brief}}</view>
+      </view>
+    </view>
+  </view> -->
+  <view class="scenic padding-bottom">
+    <view class="type-tip">
+      <text class="title">{{language.zbtj}}</text>
+    </view> 
+    <view class="type-content">
+      <view class="item" wx:for="{{hotelList2}}" wx:key="ID" bindtap="gotoDetail"data-id="{{item.ID}}" data-item="{{item}}">
+        <view class="img-box">
+          <image class="item-img" mode="aspectFill" src="{{item.ImageUrl}}"></image>
+          <view class="item-title hidden1">{{item.Name}}</view>
+        </view>
+
+        <view class="item-describe hidden2">{{item.Brief || ''}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>

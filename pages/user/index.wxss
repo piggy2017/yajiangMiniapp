@@ -1,0 +1,97 @@
+/* pages/user/index.wxss */
+.container{
+  background-color: #ecedf2;
+  width: 100%;
+  height: 100%;
+}
+.header{
+  height: 128rpx;
+  background-color: #5D7AFF;
+  padding: 26rpx 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+.portrait-box{
+  width: 120rpx;
+  height: 120rpx;
+}
+.portrait-box .portrait{
+  width: 100%;
+  height: 100%;
+}
+.loginName-box{
+  width: calc(100% - 220rpx);
+  color: #fff;
+}
+.user-info{
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  flex-flow: wrap;
+}
+.user-info view{
+  width: 100%;
+}
+.user-info .nickname{
+  padding-bottom: 12rpx;
+  font-size: 15px;
+}
+.icon-box{
+  width: 20rpx;
+  height: 34rpx;
+}
+.icon-box image{
+  width: 100%;
+  height: 100%;
+}
+.list{
+  background-color: #fff;
+}
+.list .item{
+  height: 40rpx;
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ECEDF2;
+}
+.icon-first{
+  width: 40rpx;
+  height: 40rpx;
+}
+.title{
+  width: calc(100% - 200rpx);
+  font-size: 14px;
+  color: #333;
+}
+.icon-last{
+  width: 100rpx;
+  height: 24rpx;
+}
+.language-box{
+  width: 120rpx;
+  height: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon-first image{
+  width: 100%;
+  height: 100%;
+}
+.icon-last image{
+  width: 14rpx;
+  height: 100%;
+  float: right;
+}
+.language-box image{
+  width: 14rpx;
+  height: 100%;
+  float: right;
+}
+.language-box .language{
+  font-size: 14px;
+  color: #999999;
+}

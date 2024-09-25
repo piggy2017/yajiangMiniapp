@@ -1,0 +1,8 @@
+<swiper class="swiper" indicator-active-color="#fff" indicator-color="#000"  vertical="true" circular="true"  interval="5000" duration="1000" autoplay="true" style="height:{{sHeight}};">   
+  <block wx:for="{{titleList}}" wx:for-item="item" wx:key="key">    
+    <swiper-item class="swiper-item">     
+      <view class="title hidden1">{{item.title}}</view>
+      <view class="time">{{item.publishTime}}</view>
+    </swiper-item>    
+  </block>    
+</swiper> 

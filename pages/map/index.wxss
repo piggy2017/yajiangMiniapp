@@ -1,0 +1,141 @@
+/* pages/map/index.wxss */
+.right_box{
+position: absolute;
+  right: 15rpx;
+  top: 35%;
+}
+
+.handle_map{
+  position: absolute;
+  right: 15rpx;
+  top: 10%;
+  width: 102rpx;
+  height: 102rpx;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 18rpx;
+}
+.handle_map_icon{
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 6rpx;
+}
+
+.tabBox{
+  width: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rpx;
+  
+  background-color: #fff;
+  border-radius: 5rpx;
+  /* box-shadow: 0 0 10rpx 0rpx rgba(0,0,0,0.5); */
+  flex-wrap: wrap;
+}
+.current{
+  width: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15rpx 10rpx;
+  
+  background-color: #fff;
+  border-radius: 5rpx;
+  /* box-shadow: 0 0 10rpx 0rpx rgba(0,0,0,0.5); */
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+}
+.current cover-image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.tabEvery{
+  width: 40rpx;
+  margin-bottom: 10rpx;
+  border-bottom: 1rpx solid #E1E1E1;
+  padding-bottom: 15rpx;
+}
+.content_box{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 30rpx 0;
+}
+.content_box_every{
+  width: 90%;
+  margin: 0 auto;
+  display: flex
+}
+.content_box_img{
+  width: 170rpx;
+  border-radius: 10%;
+  height: 120rpx;
+  line-height: inherit;
+}
+.content_box_close{
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+}
+.content_box_imgs{
+  width: 170rpx;
+}
+.content_box_info{
+  width: 67%;
+  margin-left: 3%;
+  flex-wrap: wrap;
+  display: inline-flex;
+  align-content: space-between;
+}
+.content_box_btn{
+  width: 67%;
+  margin-left: 3%;
+  display: inline-flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-top: 20rpx;
+}
+.right_info{
+  width: 100%;
+  font-size: 24rpx;
+  line-height: inherit;
+}
+.right_info_1{
+  font-weight: bolder;
+}
+.right_info_2{
+  display: flex;
+  align-items: center;
+  font-size: 20rpx;
+  color: #666666;
+}
+.right_info_3{
+  display: flex;
+  align-items: flex-end;
+  font-size: 20rpx;
+  color: #666666;
+}
+.right_info_check{
+  width: 45%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rpx 0;
+  border: 1rpx solid #ccc;
+  border-radius: 30rpx;
+  color: #868791;
+  font-size: 24rpx;
+}
+.right_info_check cover-image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 5px;
+}

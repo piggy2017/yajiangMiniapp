@@ -1,0 +1,51 @@
+<view class="content">
+  <view class='form'>
+    <view class="search-box clearfix">
+      <image class="search-img" mode="aspectFill" src="../../static/images/icon_search_white@2x.png"></image>
+      <input class='info-input' confirm-type='search' bindblur="handleInputBlur" bindconfirm="handleInputObjectName" placeholder="{{language.ss}}" placeholder-class='placeholder' value="{{searchValue}}" />
+    </view>
+
+    <view class="search-title" bindtap="handleSearch">{{language.ss}}</view>
+  </view>
+
+  <view class="result">
+    <view wx:if="{{newsList.length>0}}" class="news">
+      <text class="tip">{{language.lyzx}}</text>
+      <view class="title hidden1" wx:for="{{newsList}}" wx:key="title" bindtap='gotoActivity' data-url='{{item.contentUrl}}' data-title="{{item.title}}">
+        {{item.title}}
+      </view>
+    </view>
+
+    <view wx:if="{{resList.length>0}}" class="res">
+      <text class="tip">{{language.lyzy}}</text>
+      <view class="title-box" wx:for="{{resList}}" wx:key="id" bindtap='gotoActivity' data-url='{{item.contentUrl}}' data-title="{{item.name}}">
+        <view class="name hidden1">{{item.name}}</view>
+        <block wx:if="{{item.brief!=null}}">
+            <view class="brief hidden1">{{item.brief}}</view>
+          </block>
+        
+      </view>
+    </view>
+
+    <view wx:if="{{routeList.length>0}}" class="res">
+      <text class="tip">{{language.lxzy}}</text>
+      <view class="title-box" wx:for="{{routeList}}" wx:key="id" bindtap='gotoActivity' data-url='{{item.contentUrl}}' data-title="{{item.name}}">
+        <view class="name hidden1">{{item.name}}</view>
+        <block wx:if="{{item.brief}}">
+          <view class="brief hidden1">{{item.brief}}</view>
+        </block>
+      </view>
+    </view>
+
+    <view wx:if="{{itemInfoList.length>0}}" class="res">
+      <text class="tip">{{language.qt}}</text>
+      <view class="title-box" wx:for="{{itemInfoList}}" wx:key="id" bindtap='gotoActivity' data-url='{{item.contentUrl}}' data-title="{{item.name}}">
+        <view class="name hidden1">{{item.name}}</view>
+        <block wx:if="{{item.brief}}">
+          <view class="brief hidden1">{{item.brief}}</view>
+        </block>
+      </view>
+    </view>
+
+  </view>
+</view>

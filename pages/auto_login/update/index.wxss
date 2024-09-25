@@ -1,0 +1,50 @@
+.container{
+  padding: 200rpx 60rpx 0 60rpx;
+  background-color: #ECEDF2;
+  height:calc(100vh - 200rpx);
+  font-size: 17px;
+}
+.form input{
+  width: calc(100% - 30rpx);
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  border-radius: 8rpx;
+  padding-left: 30rpx;
+}
+.form .placeholder{
+  color: #888888;
+}
+.btn-box{
+  padding-bottom: 80rpx;
+  padding-top: 10rpx;
+}
+.btn-box .login-btn{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #5D7AFF;
+  border-radius: 8rpx;
+}
+.register-box{
+  text-align: center;
+}
+.register{
+  color: #5D7AFF;
+}
+.dialog{
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 50%;
+  font-size: 14px;
+  border-radius: 8rpx;
+  background-color: rgba(00, 00, 00, 0.8);
+  color: #fff;
+  position: fixed;
+  bottom: 200rpx;
+  left: 25%;
+}

@@ -1,0 +1,65 @@
+<view class="container">
+  <image mode="aspectFill" class="backImg" src="{{bgImageUrl}}"></image>
+  <view class="float-box">
+
+    <video class="video" src="{{videoUrl}}" catchtap="gotoPage" autoplay="true" wx:if="{{!!videoUrl}}"></video>
+    <view class="content">
+      <view class="bright-spot">
+        {{brightSpot}}
+      </view>
+      <view class="introduce clearfix">
+        <view class="hidden3 brief">{{summary}}</view>
+        <text class="detail-introduce" bindtap='gotoActivity' data-title="{{name}}" data-url='{{contentUrl}}'>{{language.ckgd}}>></text>
+      </view>
+      <view class="map-img-box">
+        <image src="{{mapUrl}}"></image>
+      </view>
+
+      <view class="best-time-box">
+        <view class="title">{{language.zjlysj}}</view>
+        <view class="time-content">
+          <image class="img" mode="aspectFill" src="../../static/images/icon_know_season@2x.png"></image>
+          <view class="time">
+            {{bestTravelTime}}
+          </view>
+        </view>
+      </view>
+      <view class="holiday">
+        <view class="title">{{language.ddjq}}</view>
+        <view class="holiday-item" wx:for="{{festivalList}}" wx:key="time">
+          <view class="name-time">
+            <text class="holiday-name">{{item.name}}</text>
+            <text class="holiday-time">{{item.time}}</text>
+          </view>
+          <view class="holiday-describe hidden1">
+            {{item.describe}}
+          </view>
+        </view>
+      </view>
+      <view class="weather-local">
+        <view class="title">{{language.ddtq}}</view>
+        <view class="weather-box">
+          <view class="weather-item spring">
+          <view class="time">{{springTime}}</view>
+          <view class="temperature">{{springTemperature}}</view>
+        </view>
+        <view class="weather-item summer">
+          <view class="time">{{summerTime}}</view>
+          <view class="temperature">{{summerTemperature}}</view>
+        </view>
+        <view class="weather-item autumn">
+          <view class="time">{{autumnTime}}</view>
+          <view class="temperature">{{autumnTemperature}}</view>
+        </view>
+        <view class="weather-item winter">
+          <view class="time">{{winterTime}}</view>
+          <view class="temperature">{{winterTemperature}}</view>
+        </view>
+        
+        </view>
+        
+      </view>
+
+    </view>
+  </view>
+</view>

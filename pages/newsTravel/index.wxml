@@ -1,0 +1,12 @@
+<view class="container1">
+  <view wx:for="{{newsList}}" wx:key="id" class="item" bindtap='gotoActivity' data-url='{{item.contentUrl}}' data-title="{{item.title}}">
+    <view class="title-box">
+      <image class="news-img" mode="aspectFill" src="../../static/images/icon_new_list@2x.png"></image>
+      <text class="title">{{item.title}}</text>
+    </view>
+    <view class="floor clearfix">
+      <text class="source">来源：{{item.source}}</text>
+      <text class="date">时间：{{item.publishTime}}</text>
+    </view>
+  </view>
+</view>

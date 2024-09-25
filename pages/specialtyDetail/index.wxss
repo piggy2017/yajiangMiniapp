@@ -1,0 +1,27 @@
+@import "/wxParse/wxParse.wxss";
+.content{
+  background-color: #fff;
+}
+
+.restaurant-name{
+  color: #222222;
+  font-size: 30px;
+  padding: 40rpx 30rpx;
+}
+
+.room-box{
+  margin-top: 10rpx;
+  background-color: #fff;
+  padding: 40rpx 30rpx 0 30rpx;
+}
+.room-box .room .room-img{
+  width: 100%;
+
+}
+.room-box .room .room-name{
+  color: #222222;
+  font-size: 14px;
+  text-align: center;
+  padding: 10rpx 0;
+}
+
