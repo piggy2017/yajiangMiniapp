@@ -123,7 +123,8 @@ export default {
     "ylxm":"娱乐项目",
     "lycs":"旅游厕所",
     "shdt":"手绘地图",
-    "ylyd":"医疗药店"
+    "ylyd":"医疗药店",
+    "zxgj":"720在线观景"
   },
   'en': {
     "indexTitle": "Home",
@@ -185,7 +186,7 @@ export default {
     "qd": "Sure",
     "qrxg": "Confirm the change",
     "wd": "Mine",
-    "jdtj": "Hotel recommendations",
+    "jdtj": "Hotel",
     "jdxxms": "Detailed the hotel",
     "yyzh": "Already has an account? ",
     "ljdl": "Sign in now",
@@ -194,7 +195,7 @@ export default {
     "jtss": "Transportation facilities",
     "qqrxmm": "Please confirm the new password",
     "ddtc": "Local specialties",
-    "tsjy": "Complaint recommendations",
+    "tsjy": "Complaint",
     "tcdl": "Sign out",
     "xqjs": "More information",
     "yy": "Language",
@@ -245,10 +246,11 @@ export default {
       "rsyj":"meet YaJiang",
       "bdtc":"Local specialty",
       "jtxx":"Traffic information",
-      "ylxm":"Entertainment item",
+      "ylxm":"recreation",
       "lycs":"Tourist toilet",
       "shdt":"Hand-drawn map",
-      "ylyd":"Medical pharmacy"
+      "ylyd":"Medical pharmacy",
+      "zxgj":"720 VR"
   },
   'zh-Zangs': {
     "indexTitle": "མདུན་ངོས།",
@@ -373,6 +375,7 @@ export default {
       "ylxm":"རོལ་རྩེད་རྣམ་གྲངས་",
       "lycs":"ཡུལ་སྐོར་གསང་སྤྱོད་",
       "shdt":"ལག་བྲིས་ས་བཀྲ།",
-      "ylyd":"སྨན་བཅོས་སྨན་ཚོང་ཁང་"
+      "ylyd":"སྨན་བཅོས་སྨན་ཚོང་ཁང་",
+      "zxgj":"དྲ་ཐོག་ནས་བལྟས་ཚེ720།"
   }
 }

@@ -1,5 +1,4 @@
 <view class="container">
-
   <view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
     <view class="custom-content">
       <image class="custom-back-img" mode="aspectFill" src="../../static/images/icon_return@2x.png" bindtap="gotoBack"></image>
@@ -30,7 +29,8 @@
     <view wx:if="{{vrUrl}}" class="address-box" bindtap="gotoVr" data-url='{{vrUrl}}'>
       <image class="img" mode="aspectFill" src="../../static/icons/vrIcon.png"></image>
       <view class="address hidden1">
-        720在线观景
+        <!-- 720在线观景 -->
+        {{language.zxgj}}
       </view>
       <image class="down-img" mode="aspectFill" src="../../static/images/icon_down@2x.png"></image>
     </view>
